@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+    <body>
+    <h1>Cards</h1>
+    <div id="app"></div>
+    <script type="text/babel">
+        const $app = document.getElementById("app");
+        const h = React.createElement;
+
+    const Avatar = (params) => {
+        const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`;
+        return h("img", { src });
+    };
+    ReactDOM.render(h(Avatar, { id: 2 }), $app);
+    </script>
+    </body>
+</html>

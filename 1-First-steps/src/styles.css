@@ -29,3 +29,9 @@ img {
 img.disabled {
     opacity: 0.3;
 }
+
+i{
+    display:block;
+    border: 1px solid #ccc;
+    width: 100%;
+}

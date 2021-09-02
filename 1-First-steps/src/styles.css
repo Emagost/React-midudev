@@ -35,3 +35,15 @@ i{
     border: 1px solid #ccc;
     width: 100%;
 }
+
+div{
+    font-size: 20px;
+    font-weight: bolder;
+    padding:2rem;
+}
+span{
+    padding:2rem;
+}
+p{
+    padding: 2rem;
+}

@@ -1,15 +1,22 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from "react";
 import './App.css';
+import getGifs from './services/GetGifs'
 
 function App() {
-  const [cats,updateCats] = useState(['https://http.cat/200'])
+  const [gifs,setGifs] = useState([])
+
+  useEffect(function() {
+    getGifs().then(gifs => setGifs(gifs));
+    },[])
+
   return (
     <div className="App">
       <section className="App-content">
-        <img src={cats}/>
+        {
+          gifs.map(singleGif => <img src={singleGif} alt='gifs'/>)
+        }
       </section>
     </div>
   );
 }
-
 export default App;

@@ -6,7 +6,11 @@ const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keywo
         .then (response =>{
             const {data = []} = response
             if (Array.isArray(data)){
-                const gifs = data.map(image => image.images.downsized_medium.url)
+                const gifs = data.map(image => {
+                    const {images,title,id} = image;
+                    const { url } = images.downsized_medium
+                    return {title,id,url}
+                });
                 return gifs
             }
         })

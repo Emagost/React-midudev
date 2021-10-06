@@ -1,7 +1,7 @@
 .Gif{
     border:1px solid white;
     border-radius:5px;
-    width: 30%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
